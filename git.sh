@@ -17,12 +17,12 @@ function query_input_add() {
 	do
 	read answer
 	if [ “${answer}” == “y” ]; then
-		echo ${answer}
+		#echo ${answer}
 		git add .
 		break;
 	elif [ “${answer}” == “n” ]; then	
 		echo ==== sorry! your answer is ‘${answer}’, so we don’t solve ====
-		break;
+		exit 1
 	else 
 		echo ==== Please input again ‘y’ or ’n’ ====
 	fi	
