@@ -17,7 +17,6 @@ function query_input_add() {
 	do
 	read answer
 	if [ “${answer}” == “y” ]; then
-		#echo ${answer}
 		git add .
 		break;
 	elif [ “${answer}” == “n” ]; then	
@@ -53,7 +52,7 @@ function echo_git_pull(){
 #git push 
 function echo_git_push(){
 	echo ==== now push to $git_remote_repertory_name $git_branch_name ====
-	git pull $git_remote_repertory_name $git_branch_name
+	git push $git_remote_repertory_name $git_branch_name
 	echo ==== git push it’s done ====
 }
 
